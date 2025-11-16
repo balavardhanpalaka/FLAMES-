@@ -1,0 +1,99 @@
+:root{
+  --bg:#ffffff;
+  --card:#f7f8fb;
+  --accent:#3478f6;
+  --muted:#6b7280;
+  --success:#16a34a;
+  --danger:#ef4444;
+  --glass: rgba(0,0,0,0.04);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: light;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#f3f6ff, #ffffff);
+  color:#0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+
+.container{
+  max-width:720px;
+  width:100%;
+  background:var(--card);
+  border-radius:12px;
+  padding:28px;
+  box-shadow:0 6px 24px rgba(16,24,40,0.08);
+}
+
+h1{margin:0 0 6px;font-size:1.6rem}
+.lead{margin:0 0 18px;color:var(--muted)}
+
+.field{margin-bottom:12px}
+label{display:block;font-size:0.9rem;margin-bottom:6px}
+input[type="text"]{
+  width:100%;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid rgba(15,23,42,0.08);
+  background:transparent;
+  font-size:1rem;
+}
+
+.actions{display:flex;gap:8px;margin-top:8px}
+button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:10px 14px;
+  border-radius:8px;
+  border:0;
+  cursor:pointer;
+  font-weight:600;
+  color:white;
+  background:var(--accent);
+}
+button.secondary{
+  background:transparent;
+  color:var(--accent);
+  border:1px solid var(--glass);
+}
+.result{margin-top:18px}
+.hidden{display:none}
+.card{
+  background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.4));
+  padding:14px;
+  border-radius:10px;
+  border:1px solid var(--glass);
+}
+.big{font-size:1.15rem;margin:0 0 6px}
+.muted{color:var(--muted);margin:0}
+.steps{margin-top:16px}
+.steps ol{padding-left:18px;margin:8px 0}
+.footer{margin-top:14px;font-size:0.9rem;color:var(--muted)}
+.relation{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  color:white;
+  font-weight:700;
+}
+.rel-F{background:#0ea5e9} /* Friends cyan */
+.rel-L{background:#ef4444} /* Love red */
+.rel-A{background:#fb923c} /* Affection orange */
+.rel-M{background:#7c3aed} /* Marriage violet */
+.rel-E{background:#ef4444} /* Enemy red */
+.rel-S{background:#10b981} /* Siblings green */
+
+@media (max-width:520px){
+  .container{padding:18px}
+  h1{font-size:1.25rem}
+}

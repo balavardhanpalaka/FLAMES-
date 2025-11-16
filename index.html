@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FLAMES Checker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>FLAMES Checker</h1>
+    <p class="lead">Enter two names to check their FLAMES result.</p>
+
+    <form id="flamesForm" aria-describedby="instructions">
+      <div class="field">
+        <label for="name1">Male name</label>
+        <input id="name1" name="name1" type="text" inputmode="text" autocomplete="name" placeholder="e.g. John" />
+      </div>
+
+      <div class="field">
+        <label for="name2">Female name</label>
+        <input id="name2" name="name2" type="text" inputmode="text" autocomplete="name" placeholder="e.g. Jane" />
+      </div>
+
+      <div class="actions">
+        <button type="submit" id="checkBtn">Check FLAMES</button>
+        <button type="button" id="clearBtn" class="secondary">Clear</button>
+      </div>
+    </form>
+
+    <section id="result" aria-live="polite" class="result hidden" tabindex="-1">
+      <h2 id="resultTitle">Result</h2>
+      <div id="resultCard" class="card">
+        <p id="resultText" class="big"></p>
+        <p id="explain" class="muted"></p>
+      </div>
+    </section>
+
+    <section id="steps" class="steps hidden" aria-hidden="true">
+      <h3>Steps</h3>
+      <ol id="stepsList"></ol>
+    </section>
+
+    <footer class="footer">
+      <p id="instructions" class="muted">This is a playful FLAMES calculator — for fun only.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
