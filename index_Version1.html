@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FLAMES Checker — Themed Interfaces</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-classical">
+  <main class="app" id="app">
+    <header class="app-header">
+      <h1 class="title">FLAMES Checker</h1>
+      <nav class="theme-controls" role="tablist" aria-label="Theme switcher">
+        <button class="theme-btn active" data-theme="classical" role="tab" aria-selected="true">Classical</button>
+        <button class="theme-btn" data-theme="romantic" role="tab" aria-selected="false">Romantic</button>
+        <button class="theme-btn" data-theme="sad" role="tab" aria-selected="false">Sad</button>
+      </nav>
+    </header>
+
+    <section class="card">
+      <form id="flames-form" aria-describedby="instructions">
+        <p id="instructions" class="instructions">
+          Enter two names below. FLAMES is calculated by removing common letters, counting the leftover letters, and using that count to reduce the list F L A M E S.
+        </p>
+
+        <div class="row">
+          <label for="name1">Name 1</label>
+          <input id="name1" name="name1" type="text" placeholder="e.g. Alice" autocomplete="name" required />
+        </div>
+
+        <div class="row">
+          <label for="name2">Name 2</label>
+          <input id="name2" name="name2" type="text" placeholder="e.g. Bob" autocomplete="name" required />
+        </div>
+
+        <div class="row actions">
+          <button type="submit" class="btn primary" id="check-btn">Check FLAMES</button>
+          <button type="button" class="btn" id="reset-btn">Reset</button>
+        </div>
+      </form>
+
+      <div id="result" class="result" aria-live="polite"></div>
+    </section>
+
+    <footer class="footer">
+      <small>Designed with themes: Classical · Romantic · Sad</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
